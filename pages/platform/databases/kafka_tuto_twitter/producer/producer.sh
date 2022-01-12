@@ -13,7 +13,7 @@
 
 # Log function
 log() {
-if [ "$LOGLEVEL" = "INFO" ];
+if [ "$LOGLEVEL" == "INFO" ];
 then
 	echo "INFO - $(date '+%Y-%m-%d|%H:%M:%S') - $1"
 fi
@@ -61,7 +61,7 @@ log "end_time:   $end_time"
 log "max_results: $max_results"
 
 # Build Request
-req="https://api.twitter.com/2/tweets/search/recent?query=$urlEncodedQuery&tweet.fields=created_at&max_results=100&start_time=$start_time&end_time=$end_time&expansions=author_id&user.fields=created_at"
+req="https://api.twitter.com/2/tweets/search/recent?query=$urlEncodedQuery&tweet.fields=created_at&max_results=$max_results&start_time=$start_time&end_time=$end_time&expansions=author_id&user.fields=created_at"
 
 # Response
 resp=$(curl -s "$req" -H "Authorization: Bearer $BEARER_TOKEN")
