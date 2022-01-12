@@ -1,0 +1,6 @@
+bootstrap.servers=
+enable.ssl.certificate.verification=
+ssl.ca.location=
+security.protocol=ssl
+ssl.key.location=
+ssl.certificate.location=

@@ -1,0 +1,9 @@
+# Set your Twitter API query here
+query=""
+
+# Log level
+# set LOGLEVEL=INFO for INFO level
+LOGLEVEL="INFO"
+
+# Max results per request
+max_results=20
